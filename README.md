@@ -13,8 +13,16 @@ C++14 enabled compiler
 * VS 2015 on Windows. Untested
 
 ## Installation
+
+CGAL has multiple requirements including MPFR (https://www.mpfr.org/) Boost, Eigen.
+To install all dependencies one can install libcgal-dev from repository.
+``` 
+sudo apt-get install libcgal-dev
+```
+Current package on ubuntu is cgal (4.7-4). This code requires cgal 5.0. So this project clones it.
+*TODO include boost and mpfr installation*
+
 A virtual env or a conda environemnt is recommmended. Examples use conda as default environemnt and pip.
-1.
 ```bash
 conda create --name test_evn python # latest python 3 is recommended, but should work with 2.7
 conda activate test_evn
