@@ -1,81 +1,67 @@
 # pycgal
 
-CGAL and pybing11
-only OptimalTransport 2d shape simplification included
+Python wrapper to CGAL library using pybind11
 
+Packages implemented:
+* Optimal Transport 2d shape simplification included https://doc.cgal.org/latest/Optimal_transportation_reconstruction_2/index.html
 
 ## Prerequisites
+* CMake >= 3.5
 
-**On Unix (Linux, OS X)**
-
-* A compiler with C++14 support
-* CMake >= 3.0
-
-**On Windows**
-
-* Visual Studio 2015 (required for all Python versions, see notes below)
-* CMake >= 3.1
-
+C++14 enabled compiler
+* tested on linux with 7.4.0
+* VS 2015 on Windows. Untested
 
 ## Installation
-
-Just clone this repository and pip install. Note the `--recursive` option which is
-needed for the pybind11 submodule:
-
+A virtual env or a conda environemnt is recommmended. Examples use conda as default environemnt and pip.
+1.
 ```bash
-git clone --recursive https://github.com/xvdp/pycgal.git
-cd pycgal
-./install.sh
+conda create --name test_evn python # latest python 3 is recommended, but should work with 2.7
+conda activate test_evn
 ```
 
+Clone environment with recursive flag to include cgal and pybind11 submodules
+```bash
+git clone https://github.com/xvdp/pycgal.git --recursive
+cd  pycgal
+```
 
-## Special notes for Windows
+**pip installation**
+```bash
+../install.sh
+```
 
-**Compiler requirements**
+**conda installation**
+*TODO: conda installation currently faulty*
+Install Conda and Conda Build
 
-Pybind11 requires a C++11 compliant compiler, i.e Visual Studio 2015 on Windows.
-This applies to all Python versions, including 2.7. Unlike regular C extension
-modules, it's perfectly fine to compile a pybind11 module with a VS version newer
-than the target Python's VS version. See the [FAQ] for more details.
+```bash
+conda install conda-build
+conda create --name test_evn
+conda activate test_evn
+conda build conda.recipe
+```
 
-**Runtime requirements**
+**docker**
+*TODO: untested*
 
-The Visual C++ 2015 redistributable packages are a runtime requirement for this
-project. It can be found [here][vs2015_runtime]. If you use the Anaconda Python
-distribution, you can add `vs2015_runtime` as a platform-dependent runtime
-requirement for you package: see the `conda.recipe/meta.yaml` file in this example.
+## Docs
+Uses Sphinx.
 
+```bash
+cd pycgal/docs
+make html
+```
 
-## Building the documentation
+## Licenses
 
-Documentation for the example project is generated using Sphinx. Sphinx has the
-ability to automatically inspect the signatures and documentation strings in
-the extension module to generate beautiful documentation in a variety formats.
-The following command generates HTML-based reference documentation; for other
-formats please refer to the Sphinx manual:
+Pybind11: BSD
+CGAL Optimal Transport: GPL
 
- - `cd cmake_example/docs`
- - `make html`
-
-
-## License
-
-Pybind11 is provided under a BSD-style license that can be found in the LICENSE
-file. By using, distributing, or contributing to this project, you agree to the
-terms and conditions of this license.
-
-
-## Test call
-
-```python
-import numpy as np
-import pycgal
-
-
-#df = pd.read_csv(fname, delim_whitespace=True, header=None)
-#vals = df.values.astype(float)
-array = np.random.randn(2)
-OT = pycgal.OptimalTransport()
-OT.simplify(array)
+## Test / Example
+Test is executed on install
+```bash
+python tests/test.py
+```
 
 

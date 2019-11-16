@@ -62,10 +62,11 @@ class CMakeBuild(build_ext):
 setup(
     name='pycgal',
     version='0.0.1',
-    author='xvdp@',
+    author='xvdp',
     author_email='xvdp@gmail.com',
     description='py wrapper for some CGALClasses',
     long_description='',
+    install_requires=['python==3','setuptools', 'numpy'],
     ext_modules=[CMakeExtension('pycgal')],
     cmdclass=dict(build_ext=CMakeBuild),
     zip_safe=False,
