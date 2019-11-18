@@ -1,6 +1,6 @@
 # pycgal
 
-Python wrapper to CGAL library using pybind11
+*very very small* Python wrapper to CGAL library using pybind11
 
 Packages implemented:
 * Optimal Transport 2d shape simplification included https://doc.cgal.org/latest/Optimal_transportation_reconstruction_2/index.html
