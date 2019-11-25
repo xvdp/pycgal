@@ -1,6 +1,7 @@
-# pycgal
+# edges
+A few routines to deal with edges in python, pytorch, numpy.
 
-*very very small* Python wrapper to CGAL library using pybind11
+1. Leverages CGAL 5.0 Optimal Transport to simplify sketch to minimum edges.
 
 Packages implemented:
 * Optimal Transport 2d shape simplification included https://doc.cgal.org/latest/Optimal_transportation_reconstruction_2/index.html
