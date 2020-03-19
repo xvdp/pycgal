@@ -1,7 +1,6 @@
 # edges
 A few routines to deal with edges in python, pytorch, numpy.
 
-<<<<<<< HEAD
 Python wrapper to CGAL library using pybind11
 This is a minimal wrapper implementation, not much use except perhaps as a template for further work.
 I built it quickly to understand Optimal Transport / Wasserstein Distance/
@@ -12,14 +11,12 @@ Packages implemented:
 Adding more packages is quite easy following the pybind template and the example code in 
 `src/main.cpp`
 
-=======
 1. pybind11 wrap of CGAL 5.0 Optimal Transport to simplify sketch to minimum edges.
 * Optimal Transport 2d shape simplification included https://doc.cgal.org/latest/Optimal_transportation_reconstruction_2/index.html
 
 **TODO** replace py::array with py::buffer to deal with pytorch tensors direction
 
 2. Pytorch Canny edge finding filter.
->>>>>>> 565221317a9d601d3b746b23de5ae9d5a0ffb3fa
 
 ## Prerequisites
 * CMake >= 3.5
