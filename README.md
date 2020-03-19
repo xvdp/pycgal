@@ -1,9 +1,15 @@
 # pycgal
 
 Python wrapper to CGAL library using pybind11
+This is a minimal wrapper implementation, not much use except perhaps as a template for further work.
+I built it quickly to understand Optimal Transport / Wasserstein Distance/
 
 Packages implemented:
 * Optimal Transport 2d shape simplification included https://doc.cgal.org/latest/Optimal_transportation_reconstruction_2/index.html
+
+Adding more packages is quite easy following the pybind template and the example code in 
+`src/main.cpp`
+
 
 ## Prerequisites
 * CMake >= 3.5

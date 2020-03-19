@@ -30,5 +30,5 @@ test:
     - pycgal
 
 about:
-  summary: An example project built with pybind11.
+  summary: skeleton of python wrapper to cgal. Packages {OptimalTransport}
   license_file: LICENSE
