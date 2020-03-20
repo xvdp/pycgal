@@ -1,21 +1,19 @@
-# edges
+# pycgal
 A few routines to deal with edges in python, pytorch, numpy.
 
-Python wrapper to CGAL library using pybind11
-This is a minimal wrapper implementation, not much use except perhaps as a template for further work.
-I built it quickly to understand Optimal Transport / Wasserstein Distance/
+**Minimal** python wrapper to CGAL, https://www.cgal.org/, library using pybind11 https://github.com/pybind. No more than a couple hours work.
+
+I simply wrapped CGAL to look into Optimal Transport for curve simplification. If you are looking for CGAL in python, this isn't. However, implementing other CGAL algorithms is easy as pie with this as template.
+Look into `src/main.cpp`
+
 
 Packages implemented:
 * Optimal Transport 2d shape simplification included https://doc.cgal.org/latest/Optimal_transportation_reconstruction_2/index.html
-
-Adding more packages is quite easy following the pybind template and the example code in 
-`src/main.cpp`
-
 1. pybind11 wrap of CGAL 5.0 Optimal Transport to simplify sketch to minimum edges.
 * Optimal Transport 2d shape simplification included https://doc.cgal.org/latest/Optimal_transportation_reconstruction_2/index.html
 
-**TODO** replace py::array with py::buffer to deal with pytorch tensors direction
 
+**TODO** replace py::array with py::buffer to deal with pytorch tensors direction
 2. Pytorch Canny edge finding filter.
 
 ## Prerequisites
