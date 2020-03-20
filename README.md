@@ -6,6 +6,9 @@ A few routines to deal with edges in python, pytorch, numpy.
 I simply wrapped CGAL to look into Optimal Transport for curve simplification. If you are looking for CGAL in python, this isn't. However, implementing other CGAL algorithms is easy as pie with this as template.
 Look into `src/main.cpp`
 
+If you do implement more packages, put a pull request.
+If you dont know how, I can do it, but I dont guarantee I will as this is just a toy project atm.
+
 
 Packages implemented:
 * Optimal Transport 2d shape simplification included https://doc.cgal.org/latest/Optimal_transportation_reconstruction_2/index.html
